@@ -1,0 +1,21 @@
+server:
+  port: 4040
+
+spring:
+  application:
+    name: rest-domain-api
+
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/rest_domain
+    username: postgres
+    password: 192119
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
