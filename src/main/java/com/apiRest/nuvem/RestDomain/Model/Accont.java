@@ -15,9 +15,9 @@ public class Accont {
     @Column(unique = true)
     private String number;
     private String agency;
-    @Column(scale = 13, precision = 2, nullable = false)
+    @Column(scale = 2, precision = 13, nullable = false)
     private BigDecimal balance;
-    @Column(name = "accont_limit",scale = 13, precision = 2, nullable = false)
+    @Column(name = "accont_limit",scale = 2, precision = 13, nullable = false)
     private BigDecimal limit;
 
     public Accont(String number, String agency, BigDecimal balance, BigDecimal limit) {

@@ -19,3 +19,12 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+springdoc:
+    info:
+      title: Api rest do banco Santander
+      description: Um ApiRest simples para informações de usuario
+    swagger-ui:
+      path: /docs
+
+

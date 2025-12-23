@@ -11,7 +11,7 @@ public class Card {
     private Long id;
     @Column(unique = true)
     private String number;
-    @Column(name = "car_limit", scale = 13, precision = 2, nullable = false)
+    @Column(name = "car_limit", scale = 2, precision = 13, nullable = false)
     private BigDecimal limit;
 
     public Card(String number, BigDecimal limit) {
