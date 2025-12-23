@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/users")
@@ -33,6 +34,11 @@ public class UserControler {
                 .buildAndExpand(userCreate.getId())
                 .toUri();
         return ResponseEntity.created(location).body(userCreate);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List> findAll(){
+        return ResponseEntity.ok(service.findAll());
     }
 
 

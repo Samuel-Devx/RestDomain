@@ -6,6 +6,7 @@ import com.apiRest.nuvem.RestDomain.Repository.UserRepository;
 import com.apiRest.nuvem.RestDomain.Service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 @Service
@@ -28,5 +29,10 @@ public class UserImpl implements UserService {
             throw new ExistingUser("This user ID already exist" );
         }
         return repository.save(userToCreate);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return repository.findAll();
     }
 }
